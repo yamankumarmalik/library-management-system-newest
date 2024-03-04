@@ -27,7 +27,7 @@ export class BooksService {
   //function to delete the book when the user clicks deleteBook button
   deleteBook(id: string) {
     const deleteUrl = `http://localhost:4000/books-api/delete-book/${id}`;
-    return this.httpClient.delete(deleteUrl);
+    return this.httpClient.delete<any>(deleteUrl);
   }
 
   // taking signals and variables to show data in updateBook component
